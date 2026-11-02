@@ -44,10 +44,20 @@ Run one prompt at a time with access to the **target website repository**. This 
 
 Prompts 03–05 are independent: use `review` (default) for proposals, `implement-approved` for approved issue IDs, or `verify` to refresh evidence without code changes. Reuse the same visual board; Prompt 02 is not needed for these fixes. When running all three, keep 05 last and rerun it after subsequent fixes.
 
-Example instruction in Codex (replace the target path):
+Copy this bootstrap instruction into Codex to launch a prompt on a specific project. Replace the prompt and target paths as needed; `review` mode applies to Prompts 03–05.
 
 ```text
-Read C:\GIT\AIPrompts\website\shared\03-mobile-accessibility-performance.md
-and execute it in review mode on C:\GIT\MyWebsite. Inspect that repository's
-real source code and browser rendering. Keep my current design and manual changes.
+Lis et exécute :
+C:\GIT\AIPrompts\website\shared\03-mobile-accessibility-performance.md
+
+Dépôt cible : C:\GIT\Rekindle
+
+Analyse le code source réel du website dans ce dépôt.
+Identifie d’abord son dossier, sa stack et sa commande de lancement.
+
+Utilise le mode review : présente les problèmes dans une interface
+visuelle, avec des mockups pour les corrections visuelles et des
+explications claires pour les corrections techniques.
+
+Ne modifie pas le code de l’application avant validation des corrections.
 ```
